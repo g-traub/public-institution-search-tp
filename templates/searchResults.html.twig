@@ -5,16 +5,16 @@
 {% endblock %}
 
 {% block body %}
-	<a href="index.html" class="back"><img src="img/SVG/icon--back.svg" alt=""></a>
+	<a href="index.html" class="back"><img src="{{ asset('build/icon--back.svg') }}" alt=""></a>
 	<div class="wrapper wrapper--output">
-		<img src="img/SVG/hotel.svg" alt="" class="intro--img">
+		<img src="{{ asset('build/hotel.svg') }}" alt="" class="intro--img">
 		<p class="marie__nom">Marie du
 			<span>Lyon</span>
 		</p>
 		<div class="wrapper--output">
 
 			<div class="box--content box--address">
-				<img src="img/SVG/icon--adress.svg" alt="">
+				<img src="{{ asset('build/icon--adress.svg') }}" alt="">
 				<div>
 					<h2>Adresse</h2>
 					<p>Place de la Mairie</p>
@@ -29,7 +29,7 @@
 
 			</div>
 			<div class="box--content box--opening">
-				<img src="img/SVG/iocn--time.svg" alt="">
+				<img src="{{ asset('build/icon--time.svg') }}" alt="">
 				<div>
 					<h2>Ouverture</h2>
 					<div class="opening--day">
@@ -146,7 +146,7 @@
 
 			</div>
 			<div class="box--content box--contact">
-				<img src="img/SVG/icon--tele.svg" alt="">
+				<img src="{{ asset('build/icon--tele.svg') }}" alt="">
 				<div>
 					<h2>Contact</h2>
 					<a href="mailto:mail@maire.fr">mail@maire.fr</a><br>
