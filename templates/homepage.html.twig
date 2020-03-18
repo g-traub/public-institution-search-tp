@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        <h1>hell yeah</h1>
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		{% block stylesheets %}{% endblock %}
+	</head>
+	<body>
+		<div class="wrapper">
+			<img src="img/SVG/hotel.svg" alt="" class="intro--img">
+			<p>Cherchez des information des ton hitel du ville</p>
+
+			<div class="wrapper--form">
+				<div class="wrapper--input">
+					<div class="box--input">
+						<input class="input" type="text" placeholder="Ton Ville">
+					</div>
+
+					<p>ou</p>
+					<input class="input" type="text" placeholder="Ton Zip-Code">
+				</div>
+				<a href="output.html">
+					<button>Cherche des infos</button>
+				</a>
+			</div>
+		</div>
+	</body>
 </html>
