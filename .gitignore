@@ -37,6 +37,8 @@
 
 # PHPUnit
 /app/phpunit.xml
+.phpunit
+.phpunit.result.cache
 /phpunit.xml
 
 # Build data
@@ -50,3 +52,11 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+###< symfony/framework-bundle ###
