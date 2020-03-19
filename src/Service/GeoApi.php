@@ -6,7 +6,8 @@ class GeoApi
 {
   public function getCityCode($name, $cp)
   {
-    // @TODO: validation + trim
+    $error = null;
+    $code = null;
 
     // request to api using curl
     $ch = curl_init();
@@ -21,12 +22,17 @@ class GeoApi
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);
-    if (curl_errno($ch)) {
-      // @TODO : if api is offline, handle error
-      echo 'Error:' . curl_error($ch);
-    }
     curl_close($ch);
-    // @TODO : test if results not empty
-    return json_decode($result, true)[0]['code'];
+
+    $arrResult = json_decode($result, true);
+
+    if ($arrResult === null) {
+      $error = 'Une erreur est survenue, veuillez réessayer ultérieurement';
+    } elseif (count($arrResult) === 0) {
+      $error = 'Aucun résultat pour cette recherche';
+    } else {
+      $code = $arrResult[0]['code'];
+    }
+    return ['code' => $code, 'error' => $error];
   }
 }

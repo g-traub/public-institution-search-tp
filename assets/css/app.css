@@ -183,7 +183,8 @@ body {
   margin-left: 10px;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button {
   background-color: #3a5d81;
   color: #fff;
   border: none;

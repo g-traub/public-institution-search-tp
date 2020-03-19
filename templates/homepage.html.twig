@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block body %}
+{% block content %}
 	<h1>Recherchez les informations de contact de la mairie de votre ville</h1>
 
 	<form class="wrapper--form" action="{{ path('search_results') }}" method="get">
@@ -11,4 +11,4 @@
 		</div>
 		<input type="submit" value="Rechercher">
 	</form>
-</body>{% endblock %}
+{% endblock %}

@@ -6,6 +6,9 @@ class EtablissementPublicApi
 {
   public function getInfos($code)
   {
+    $error = null;
+    $infos = null;
+
     // request to api using curl
     $ch = curl_init();
 
@@ -19,12 +22,17 @@ class EtablissementPublicApi
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);
-    if (curl_errno($ch)) {
-      // @TODO : if api is offline, handle error
-      echo 'Error:' . curl_error($ch);
-    }
     curl_close($ch);
-    // @TODO : test if results not empty
-    return json_decode($result, true)['features'][0]['properties'];
+
+    $arrResult = json_decode($result, true);
+
+    if ($arrResult === null) {
+      $error = 'Une erreur est survenue, veuillez réessayer ultérieurement';
+    } elseif (count($arrResult['features']) === 0) {
+      $error = 'Aucun informations pour la mairie de cette ville';
+    } else {
+      $infos = $arrResult['features'][0]['properties'];
+    }
+    return ['infos' => $infos, 'error' => $error];
   }
 }
