@@ -1,81 +1,177 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
-ol, ul {
-  list-style: none; }
+ol,
+ul {
+  list-style: none;
+}
 
-blockquote, q {
-  quotes: none; }
+blockquote,
+q {
+  quotes: none;
+}
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 body {
   display: flex;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 .wrapper--flex {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  .wrapper .intro--img {
-    margin-bottom: 30px; }
-  .wrapper p {
-    color: grey; }
-  .wrapper .wrapper--form {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .wrapper .wrapper--form .wrapper--input {
-      display: flex;
-      align-items: center; }
-      .wrapper .wrapper--form .wrapper--input input {
-        margin-right: 10px;
-        margin-left: 10px; }
+  align-items: center;
+}
+.wrapper .intro--img {
+  margin-bottom: 30px;
+}
+.wrapper p {
+  color: grey;
+}
+.wrapper .wrapper--form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .wrapper--form .wrapper--input {
+  display: flex;
+  align-items: center;
+}
+.wrapper .wrapper--form .wrapper--input input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 
-button {
-  background-color: #3A5D81;
+input[type="submit"] {
+  background-color: #3a5d81;
   color: #fff;
   border: none;
   outline: 0;
@@ -83,83 +179,110 @@ button {
   border-radius: 5px;
   margin-top: 20px;
   text-transform: uppercase;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
 
 .input {
   font-size: 16px;
   display: block;
-  padding: 4px 5px; }
-  .input:focus {
-    outline-color: #3A5D81; }
+  padding: 4px 5px;
+}
+.input:focus {
+  outline-color: #3a5d81;
+}
 
 .intro--img {
-  width: 300px; }
+  width: 300px;
+}
 
 .marie__nom {
-  background-color: #3A5D81;
+  background-color: #3a5d81;
   color: #fff !important;
   padding: 10px;
   width: 300px;
-  text-align: center; }
+  text-align: center;
+}
 
 .wrapper--output {
-  margin-top: 20px; }
-  @media screen and (min-width: 800px) {
-    .wrapper--output {
-      display: flex; } }
-  .wrapper--output .intro--img {
-    margin-bottom: 10px; }
+  margin-top: 20px;
+}
+@media screen and (min-width: 800px) {
+  .wrapper--output {
+    display: flex;
+  }
+}
+.wrapper--output .intro--img {
+  margin-bottom: 10px;
+}
 
 .wrapper--output {
-  width: 100%; }
-  @media screen and (max-width: 800px) {
-    .wrapper--output {
-      display: flex;
-      flex-direction: column;
-      align-items: center; } }
-  @media screen and (min-width: 800px) {
-    .wrapper--output {
-      width: 800px; } }
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .wrapper--output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 800px) {
+  .wrapper--output {
+    width: 800px;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .box--content {
     width: 300px;
     text-align: center;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px;
+  }
+}
 
 @media screen and (min-width: 800px) {
   .box--content {
     width: 33.3%;
     display: flex;
-    align-items: flex-start; } }
+    align-items: flex-start;
+  }
+}
 
 .box--content img {
   width: 20%;
-  margin-right: 10px; }
+  margin-right: 10px;
+}
 
 .box--content h2 {
   font-weight: bold;
-  color: #3A5D81;
-  margin-bottom: 5px; }
+  color: #3a5d81;
+  margin-bottom: 5px;
+}
 
 .box--content .space {
   margin-right: 5px;
-  margin-left: 5px; }
+  margin-left: 5px;
+}
 
 .opening--day {
-  margin-bottom: 5px; }
-  .opening--day .opening__headline {
-    font-size: 0.8em;
-    font-weight: lighter; }
+  margin-bottom: 5px;
+}
+.opening--day .opening__headline {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
 
 .box--contact a {
   color: grey;
-  text-decoration: none; }
-  .box--contact a:hover {
-    color: #3A5D81; }
+  text-decoration: none;
+}
+.box--contact a:hover {
+  color: #3a5d81;
+}
 
 .back {
   position: absolute;
   width: 50px;
   top: 10px;
-  left: 10px; }
+  left: 10px;
+}

@@ -3,20 +3,15 @@
 {% block body %}
 	<div class="wrapper">
 		<img src="{{ asset('build/hotel.svg') }}" alt="" class="intro--img">
-		<p>Cherchez des information des ton hitel du ville</p>
+		<p>Recherchez les informations des institutions de votre ville</p>
 
-		<div class="wrapper--form">
+		<form class="wrapper--form">
 			<div class="wrapper--input">
-				<div class="box--input">
-					<input class="input" type="text" placeholder="Ton Ville">
-				</div>
-
-				<p>ou</p>
-				<input class="input" type="text" placeholder="Ton Zip-Code">
+				<input class="input" type="text" placeholder="Votre ville" required>
+				<p>et</p>
+				<input class="input" type="text" placeholder="Votre code postal" required>
 			</div>
-			<a href="output.html">
-				<button>Cherche des infos</button>
-			</a>
-		</div>
+			<input type="submit" value="Rechercher">
+		</form>
 	</div>
 </body>{% endblock %}
