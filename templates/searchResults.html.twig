@@ -6,33 +6,29 @@
 
 {% block body %}
 	<a href="{{ path('homepage') }}" class="back"><img src="{{ asset('build/icon--back.svg') }}" alt=""></a>
-	<div class="wrapper wrapper--output">
-		<img src="{{ asset('build/hotel.svg') }}" alt="" class="intro--img">
-		<p class="marie__nom">{{ nom }}</p>
-		<div class="wrapper--output">
+	<p class="marie__nom">{{ nom }}</p>
+	<div class="wrapper--output">
+		<div class="box--content box--address">
+			<img src="{{ asset('build/icon--adress.svg') }}" alt="">
+			<div>
+				<h2>Adresse</h2>
+				{% for ligne in adresses[0].lignes %}
+					<p>{{ ligne }}</p>
+				{% endfor %}
+				<p>{{ adresses[0].codePostal }}</p>
+				<p>{{ adresses[0].commune }}</p>
+			</div>
+		</div>
 
-			<div class="box--content box--address">
-				<img src="{{ asset('build/icon--adress.svg') }}" alt="">
-				<div>
-					<h2>Adresse</h2>
-					{% for ligne in adresses[0].lignes %}
-						<p>{{ ligne }}</p>
-					{% endfor %}
-					<p>{{ adresses[0].codePostal }}</p>
-					<p>{{ adresses[0].commune }}</p>
-				</div>
+		<div class="box--content box--contact">
+			<img src="{{ asset('build/icon--tele.svg') }}" alt="">
+			<div>
+				<h2>Contact</h2>
+				<a href="{{email}}">{{email}}</a>
+				<a href="http://marie.fr">{{ url }}</a>
+				<a href="tel:{{ telephone }}">{{ telephone }}</a>
 			</div>
 
-			<div class="box--content box--contact">
-				<img src="{{ asset('build/icon--tele.svg') }}" alt="">
-				<div>
-					<h2>Contact</h2>
-					<a href="{{email}}">{{email}}</a>
-					<a href="http://marie.fr">{{ url }}</a>
-					<a href="tel:{{ telephone }}">{{ telephone }}</a>
-				</div>
-
-			</div>
 		</div>
 	</div>
 {% endblock %}

@@ -1,17 +1,14 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-	<div class="wrapper">
-		<img src="{{ asset('build/hotel.svg') }}" alt="" class="intro--img">
-		<h1>Recherchez les informations de contact de la mairie de votre ville</h1>
+	<h1>Recherchez les informations de contact de la mairie de votre ville</h1>
 
-		<form class="wrapper--form" action="{{ path('search_results') }}" method="get">
-			<div class="wrapper--input">
-				<input name="city" class="input" type="text" placeholder="Votre ville" required>
-				<p>et</p>
-				<input name="cp" class="input" type="text" placeholder="Votre code postal" required>
-			</div>
-			<input type="submit" value="Rechercher">
-		</form>
-	</div>
+	<form class="wrapper--form" action="{{ path('search_results') }}" method="get">
+		<div class="wrapper--input">
+			<input name="city" class="input" type="text" placeholder="Votre ville" required>
+			<p>et</p>
+			<input name="cp" class="input" type="text" placeholder="Votre code postal" required>
+		</div>
+		<input type="submit" value="Rechercher">
+	</form>
 </body>{% endblock %}

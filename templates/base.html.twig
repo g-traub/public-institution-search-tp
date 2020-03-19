@@ -11,6 +11,8 @@
 		{% endblock %}
 	</head>
 	<body>
-		{% block body %}{% endblock %}
-	</body>
-</html>
+		<div class="wrapper">
+			<img src="{{ asset('build/hotel.svg') }}" alt="" class="intro--img"> {% block body %}{% endblock %}
+			</div>
+		</body>
+	</html>

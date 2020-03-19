@@ -159,6 +159,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .wrapper .intro--img {
   margin-bottom: 30px;
