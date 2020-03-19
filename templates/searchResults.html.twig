@@ -8,151 +8,28 @@
 	<a href="{{ path('homepage') }}" class="back"><img src="{{ asset('build/icon--back.svg') }}" alt=""></a>
 	<div class="wrapper wrapper--output">
 		<img src="{{ asset('build/hotel.svg') }}" alt="" class="intro--img">
-		<p class="marie__nom">Marie du
-			<span>Lyon</span>
-		</p>
+		<p class="marie__nom">{{ nom }}</p>
 		<div class="wrapper--output">
 
 			<div class="box--content box--address">
 				<img src="{{ asset('build/icon--adress.svg') }}" alt="">
 				<div>
 					<h2>Adresse</h2>
-					<p>Place de la Mairie</p>
-					<div class="wrapper--flex">
-						<p>Bourg-Achard</p>
-						<p class="space">
-							|
-						</p>
-						<p>27310</p>
-					</div>
+					{% for ligne in adresses[0].lignes %}
+						<p>{{ ligne }}</p>
+					{% endfor %}
+					<p>{{ adresses[0].codePostal }}</p>
+					<p>{{ adresses[0].commune }}</p>
 				</div>
-
 			</div>
-			<div class="box--content box--opening">
-				<img src="{{ asset('build/icon--time.svg') }}" alt="">
-				<div>
-					<h2>Ouverture</h2>
-					<div class="opening--day">
-						<p class="opening__headline">Lundi</p>
-						<div class="wrapper--flex">
-							<p class="opening__time">
-								<span class="opening__time__number">9:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">12:00</span>
-							</p>
-							<p class="space">
-								|
-							</p>
-							<p class="opening__time">
-								<span class="opening__time__number">13:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">19:00</span>
-							</p>
-						</div>
-					</div>
-					<div class="opening--day">
-						<p class="opening__headline">Mardi</p>
-						<div class="wrapper--flex">
-							<p class="opening__time">
-								<span class="opening__time__number">9:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">12:00</span>
-							</p>
-							<p class="space">
-								|
-							</p>
-							<p class="opening__time">
-								<span class="opening__time__number">13:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">19:00</span>
-							</p>
-						</div>
-					</div>
-					<div class="opening--day">
-						<p class="opening__headline">Mercrdi</p>
-						<div class="wrapper--flex">
-							<p class="opening__time">
-								<span class="opening__time__number">9:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">12:00</span>
-							</p>
-							<p class="space">
-								|
-							</p>
-							<p class="opening__time">
-								<span class="opening__time__number">13:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">19:00</span>
-							</p>
-						</div>
-					</div>
-					<div class="opening--day">
-						<p class="opening__headline">Jeudi</p>
-						<div class="wrapper--flex">
-							<p class="opening__time">
-								<span class="opening__time__number">9:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">12:00</span>
-							</p>
-							<p class="space">
-								|
-							</p>
-							<p class="opening__time">
-								<span class="opening__time__number">13:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">19:00</span>
-							</p>
-						</div>
-					</div>
-					<div class="opening--day">
-						<p class="opening__headline">Vendrdi</p>
-						<div class="wrapper--flex">
-							<p class="opening__time">
-								<span class="opening__time__number">9:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">12:00</span>
-							</p>
-							<p class="space">
-								|
-							</p>
-							<p class="opening__time">
-								<span class="opening__time__number">13:00</span>
-								<span>
-									-
-								</span>
-								<span class="opening__time__number">19:00</span>
-							</p>
-						</div>
-					</div>
-				</div>
 
-			</div>
 			<div class="box--content box--contact">
 				<img src="{{ asset('build/icon--tele.svg') }}" alt="">
 				<div>
 					<h2>Contact</h2>
-					<a href="mailto:mail@maire.fr">mail@maire.fr</a><br>
-					<a href="http://marie.fr">www.marie.fr</a>
-					<br><br>
-					<a href="tel:+01234">0123678</a>
+					<a href="{{email}}">{{email}}</a>
+					<a href="http://marie.fr">{{ url }}</a>
+					<a href="tel:{{ telephone }}">{{ telephone }}</a>
 				</div>
 
 			</div>

@@ -116,6 +116,18 @@ q {
   quotes: none;
 }
 
+a,
+p {
+  padding: 0.3rem 0;
+  display: block;
+}
+
+h1 {
+  font-size: 1.3rem;
+  color: #3a5d81;
+  margin-bottom: 0.3rem;
+}
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -210,6 +222,7 @@ input[type="submit"] {
 @media screen and (min-width: 800px) {
   .wrapper--output {
     display: flex;
+    justify-content: center;
   }
 }
 .wrapper--output .intro--img {
@@ -228,7 +241,7 @@ input[type="submit"] {
 }
 @media screen and (min-width: 800px) {
   .wrapper--output {
-    width: 800px;
+    max-width: 1000px;
   }
 }
 

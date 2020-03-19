@@ -26,7 +26,7 @@ class MainController extends AbstractController
     $city = $request->query->get('city');
     $cp = $request->query->get('cp');
     $code = $geoApi->getCityCode($city, $cp);
-    $result = $etablissementPublicApi->getInfos($code);
-    return $this->render('searchResults.html.twig');
+    $institutionInfos = $etablissementPublicApi->getInfos($code);
+    return $this->render('searchResults.html.twig', $institutionInfos);
   }
 }
