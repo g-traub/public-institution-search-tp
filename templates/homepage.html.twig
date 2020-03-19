@@ -5,11 +5,11 @@
 		<img src="{{ asset('build/hotel.svg') }}" alt="" class="intro--img">
 		<p>Recherchez les informations des institutions de votre ville</p>
 
-		<form class="wrapper--form">
+		<form class="wrapper--form" action="{{ path('search_results') }}" method="get">
 			<div class="wrapper--input">
-				<input class="input" type="text" placeholder="Votre ville" required>
+				<input name="city" class="input" type="text" placeholder="Votre ville" required>
 				<p>et</p>
-				<input class="input" type="text" placeholder="Votre code postal" required>
+				<input name="cp" class="input" type="text" placeholder="Votre code postal" required>
 			</div>
 			<input type="submit" value="Rechercher">
 		</form>

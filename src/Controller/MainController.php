@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+use App\Service\GeoApi;
 
 class MainController extends AbstractController
 {
@@ -21,6 +23,9 @@ class MainController extends AbstractController
    */
   public function search()
   {
+    $city = $request->query->get('city');
+    $cp = $request->query->get('cp');
+    $code = $geoApi->getCityCode($city, $cp);
     return $this->render('searchResults.html.twig');
   }
 }
